@@ -1,12 +1,12 @@
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
-let personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-let questionOne = prompt('Один из последних просмотренных фильмов?', '');
-let questionTwo = prompt('На сколько оцените его?', '');
-personalMovieDB.movies[questionOne] = questionTwo;
-console.log(personalMovieDB);
+// Место для первой задачи
+function firstTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const arr = [3, 5, 8, 16, 20, 23, 50];
+    let result = [];
+    for(let i = 0; i < arr.length; i++){
+        result[i] = arr[i];
+    }
+    console.log(result);
+    return result;
+}
+firstTask();
