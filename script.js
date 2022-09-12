@@ -1,11 +1,19 @@
-function calculateVolumeAndArea(side) {
-    if(side != 'string' && side > 0){
-    let a = side * side * side;
-    let b = 6 * side * side;
-    console.log(`обьем куба: ${a}, площадь всей поверхности: ${b}`);
-}
-    else{
-        console.log('писяо');
+function getTimeFromMinutes(minutes) {
+    if(typeof(minutes) == 'string' || !Number.isInteger(minutes) || minutes < 0){
+        return "Ошибка, проверьте данные";
     }
+    if(minutes < 600){
+        let hour = Math.floor(minutes / 60);
+        let pisos = minutes % 60;
+        let a;
+        if(hour === 1){
+            a = 'час';
+        }else if(hour > 1 && hour < 5){
+            a = 'часа';
+        }else{
+            a = 'часов';
+        }
+    console.log( `Это ${hour} ${a} и ${pisos} минут`);
+    }   
 }
-calculateVolumeAndArea('голова');
+getTimeFromMinutes(150);
