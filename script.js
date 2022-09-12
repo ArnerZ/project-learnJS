@@ -1,19 +1,15 @@
-function getTimeFromMinutes(minutes) {
-    if(typeof(minutes) == 'string' || !Number.isInteger(minutes) || minutes < 0){
-        return "Ошибка, проверьте данные";
+function findMaxNumber(a, b ,c, d) {
+    // Самое простое - это использовать Math.max :)
+    // А оптимизировать такую проверку мы научимся совсем скоро
+    if (typeof(a) !== 'number' ||
+        typeof(b) !== 'number' ||
+        typeof(c) !== 'number' ||
+        typeof(d) !== 'number') {
+        return 0;
+    } else {
+        return Math.max(a, b ,c, d);
     }
-    if(minutes < 600){
-        let hour = Math.floor(minutes / 60);
-        let pisos = minutes % 60;
-        let a;
-        if(hour === 1){
-            a = 'час';
-        }else if(hour > 1 && hour < 5){
-            a = 'часа';
-        }else{
-            a = 'часов';
-        }
-    console.log( `Это ${hour} ${a} и ${pisos} минут`);
-    }   
 }
-getTimeFromMinutes(150);
+
+findMaxNumber(2,3,4, 5.6);
+findMaxNumber("6",12,123,4);
